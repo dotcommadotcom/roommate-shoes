@@ -8,8 +8,17 @@ x- install and set up django
 x- install and set up vue
 x- freeze requirements
 
-APP
+APP VUE
 x- add bulma
 x- set up navigation bar
 x- add footer
 x- show mobile menu
+
+PRODUCT APP DJANGO
+x- create Category model
+x-- fields: name, slug
+x-- ordering, get_absolute_url
+- create Product model
+-- category, name, slug, description, price, image, thumbnail, date added
+-- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
+
