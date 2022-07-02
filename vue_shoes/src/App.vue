@@ -15,29 +15,29 @@
         <div class="navbar-end">
           <router-link to="/adidas" class="navbar-item">Adidas</router-link>
           <router-link to="/nike" class="navbar-item">Nike</router-link>
-        </div>
-
-        <div class="navbar-item">
-          <div class="buttons">
-            <router-link to="/login" class="button is-dark">Log in</router-link>
-            <router-link to="/cart" class="button is-dark">
-              <span class="icon">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
-            </router-link>
+          
+          <div class="navbar-item">
+            <div class="buttons">
+              <router-link to="/login" class="button is-dark">Log in</router-link>
+              <router-link to="/cart" class="button is-dark">
+                <span class="icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
     </nav>
+
+    <section class="section">
+      <router-view/>
+    </section>
+
+    <footer class="footer has-background-white">
+      <p class="has-text-centered">Copyright (c) 2022</p>
+    </footer>
   </div>
-
-  <section>
-    <router-view/>
-  </section>
-
-  <footer class="footer has-background-white">
-    <p class="has-text-centered">Copyright (c) 2022</p>
-  </footer>
 </template>
 
 <script>
@@ -56,5 +56,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../node_modules/bulma'
+@import '../node_modules/bulma';
 </style>
