@@ -1,1 +1,9 @@
 TODO
+
+INIT PROJECT
+x- initialize git
+x- create virtual environment
+x- add .gitignore
+x- install and set up django
+- install and set up vue
+- freeze requirements
