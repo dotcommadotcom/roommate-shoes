@@ -6,4 +6,10 @@ x- create virtual environment
 x- add .gitignore
 x- install and set up django
 x- install and set up vue
-- freeze requirements
+x- freeze requirements
+
+APP
+x- add bulma
+x- set up navigation bar
+x- add footer
+x- show mobile menu
