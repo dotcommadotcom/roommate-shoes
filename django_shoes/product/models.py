@@ -49,7 +49,7 @@ class Product(models.Model):
 
     return File(thumb_io, name=image.name)
 
-  def get_thumbnail(self):
+  def get_thumbnail_url(self):
     if not self.image:
       return ''
 

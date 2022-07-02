@@ -23,5 +23,10 @@ x-- category, name, slug, description, price, image, thumbnail, date added
 x-- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
 
 PRODUCT SERIALIZER DJANGO
-- create ProductSerializer
-- add fields: id, name, get_absolute_url, description, price, get_image_url, get_thumbnail_url
+x- create ProductSerializer
+x- add fields: id, name, get_absolute_url, description, price, get_image_url, get_thumbnail_url
+
+LATEST PRODUCT LIST DJANGO
+x- create LatestProductList
+x- get four products and serializer 
+x- add product urls
