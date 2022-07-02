@@ -44,9 +44,15 @@
 export default {
   data() {
     return {
-      mobileMenuVisible: false
+      mobileMenuVisible: false,
+      cart: {
+        items: []
+      }
     }
   },
+  beforeCreate() {
+    this.$store.commit('initializeStore')
+  },  
   methods: {
     toggleMobileMenu() {
       this.mobileMenuVisible = !this.mobileMenuVisible
