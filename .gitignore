@@ -176,3 +176,7 @@ cython_debug/
 # VIRTUAL ENVIRONMENT #
 
 venv_shoes/
+
+# MEDIA # 
+
+django_shoes/uploads/

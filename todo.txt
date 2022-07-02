@@ -18,7 +18,7 @@ PRODUCT APP DJANGO
 x- create Category model
 x-- fields: name, slug
 x-- ordering, get_absolute_url
-- create Product model
--- category, name, slug, description, price, image, thumbnail, date added
--- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
+x- create Product model
+x-- category, name, slug, description, price, image, thumbnail, date added
+x-- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
 
