@@ -22,3 +22,6 @@ x- create Product model
 x-- category, name, slug, description, price, image, thumbnail, date added
 x-- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
 
+PRODUCT SERIALIZER DJANGO
+- create ProductSerializer
+- add fields: id, name, get_absolute_url, description, price, get_image_url, get_thumbnail_url
