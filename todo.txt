@@ -27,10 +27,17 @@ x- create ProductSerializer
 x- add fields: id, name, get_absolute_url, description, price, get_image_url, get_thumbnail_url
 
 LATEST PRODUCT LIST DJANGO
-x- create LatestProductList
+x- create LatestProductList view
 x- get four products and serializer 
-x- add product urls
+x- add latest products to product urls
 
 HOME VUE
 x- add title and subtitle to home page
 x- add latest product lists to home
+
+PRODUCT DJANGO AND VUE
+x- create ProductDetail view in django
+x- add product detail to product urls
+- create Product vue 
+- get product from backend
+- add product to router
