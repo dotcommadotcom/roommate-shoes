@@ -30,3 +30,7 @@ LATEST PRODUCT LIST DJANGO
 x- create LatestProductList
 x- get four products and serializer 
 x- add product urls
+
+HOME VUE
+x- add title and subtitle to home page
+x- add latest product lists to home
