@@ -20,9 +20,8 @@
             <div class="buttons">
               <router-link to="/login" class="button is-dark">Log in</router-link>
               <router-link to="/cart" class="button is-dark">
-                <span class="icon">
-                  <i class="fas fa-shopping-cart"></i>
-                </span>
+                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                <span>{{ cartTotalLength }}</span>
               </router-link>
             </div>
           </div>
@@ -56,6 +55,21 @@ export default {
   methods: {
     toggleMobileMenu() {
       this.mobileMenuVisible = !this.mobileMenuVisible
+    }
+  },
+  computed: {
+    cartTotalLength() {
+      let totalLength = 0
+
+      // this.cart.items.forEach(function addQuantity(item) {
+      //   totalLength += item.quantity
+      // })
+
+      for (let i = 0; i < this.cart.items.length; i++) {
+        totalLength += this.cart.items[i].quantity
+      }
+
+      return totalLength
     }
   }
 }
