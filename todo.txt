@@ -46,3 +46,5 @@ x- create View Detail button to product page
 STORE VUE
 x- set up store 
 x- add store functions
+- initialize store in app
+- 
