@@ -42,10 +42,3 @@ x- create Product vue
 x- get product from backend
 x- add product to router
 x- create View Detail button to product page
-
-STORE VUE
-x- set up store 
-x- add store functions
-x- add cart functionality and connect to store
-- make add to cart button work
-- show a toast message

@@ -20,8 +20,9 @@
             <div class="buttons">
               <router-link to="/login" class="button is-dark">Log in</router-link>
               <router-link to="/cart" class="button is-dark">
-                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-                <span>{{ cartTotalLength }}</span>
+                <span class="icon">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
               </router-link>
             </div>
           </div>
@@ -43,32 +44,12 @@
 export default {
   data() {
     return {
-      mobileMenuVisible: false,
-      cart: {
-        items: []
-      }
+      mobileMenuVisible: false
     }
-  },
-  beforeCreate() {
-    this.$store.commit('initializeStore')
-  },  
-  mounted() {
-    this.cart = this.$store.state.cart
   },
   methods: {
     toggleMobileMenu() {
       this.mobileMenuVisible = !this.mobileMenuVisible
-    }
-  },
-  computed: {
-    cartTotalLength() {
-      let totalLength = 0
-
-      for (let i = 0; i < this.cart.items.length; i++) {
-        totalLength += this.cart.items[i].quantity
-      }
-
-      return totalLength
     }
   }
 }
@@ -77,7 +58,3 @@ export default {
 <style lang="scss">
 @import '../node_modules/bulma';
 </style>
-
-      <!-- // this.cart.items.forEach(function addQuantity(item) {
-      //   totalLength += item.quantity
-      // }) -->
