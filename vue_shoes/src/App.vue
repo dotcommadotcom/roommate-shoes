@@ -52,6 +52,9 @@ export default {
   beforeCreate() {
     this.$store.commit('initializeStore')
   },  
+  mounted() {
+    this.cart = this.$store.state.cart
+  },
   methods: {
     toggleMobileMenu() {
       this.mobileMenuVisible = !this.mobileMenuVisible
@@ -60,10 +63,6 @@ export default {
   computed: {
     cartTotalLength() {
       let totalLength = 0
-
-      // this.cart.items.forEach(function addQuantity(item) {
-      //   totalLength += item.quantity
-      // })
 
       for (let i = 0; i < this.cart.items.length; i++) {
         totalLength += this.cart.items[i].quantity
@@ -78,3 +77,7 @@ export default {
 <style lang="scss">
 @import '../node_modules/bulma';
 </style>
+
+      <!-- // this.cart.items.forEach(function addQuantity(item) {
+      //   totalLength += item.quantity
+      // }) -->

@@ -46,5 +46,6 @@ x- create View Detail button to product page
 STORE VUE
 x- set up store 
 x- add store functions
-- add cart functionality and connect to store
-- 
+x- add cart functionality and connect to store
+- make add to cart button work
+- show a toast message
