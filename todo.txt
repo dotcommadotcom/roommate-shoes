@@ -42,3 +42,8 @@ x- create Product vue
 x- get product from backend
 x- add product to router
 x- create View Detail button to product page
+
+STORE VUE
+x- set up store and store functionality
+- set up store functionality in app
+- set up store functionality in product
