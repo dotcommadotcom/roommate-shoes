@@ -16,9 +16,9 @@
             <input type="number" class="input" min="1" v-model="quantity">
           </div>
 
-          <!-- <div class="control">
+          <div class="control">
             <a class="button is-dark" @click="addToCart">Add to cart</a>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -52,18 +52,18 @@ export default {
             console.log(error)
           })
     },
-    // addToCart() {
-    //   if (isNaN(this.quantity) || this.quantity < 1) {
-    //     this.quantity = 1
-    //   }
+    addToCart() {
+      if (isNaN(this.quantity) || this.quantity < 1) {
+        this.quantity = 1
+      }
 
-    //   const item = {
-    //     product: this.product,
-    //     quantity: this.quantity
-    //   }
+      const item = {
+        product: this.product,
+        quantity: this.quantity
+      }
 
-    //   this.$store.commit('addToCart', item)
-    // }
+      this.$store.commit('addToCart', item)
+    }
   }
 }
 </script>

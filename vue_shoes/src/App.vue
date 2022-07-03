@@ -21,7 +21,7 @@
               <router-link to="/login" class="button is-dark">Log in</router-link>
               <router-link to="/cart" class="button is-dark">
                 <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-                <!-- <span>{{ cartTotalLength }}</span> -->
+                <span>{{ cartTotalLength }}</span>
               </router-link>
             </div>
           </div>
@@ -50,10 +50,10 @@ export default {
     }
   },
   beforeCreate() {
-    // this.$store.commit('initializeStore')
+    this.$store.commit('initializeStore')
   },  
   mounted() {
-    // this.cart = this.$store.state.cart
+    this.cart = this.$store.state.cart
   },
   methods: {
     toggleMobileMenu() {
@@ -61,15 +61,15 @@ export default {
     }
   },
   computed: {
-    // cartTotalLength() {
-    //   let totalLength = 0
+    cartTotalLength() {
+      let totalLength = 0
 
-    //   for (let i = 0; i < this.cart.items.length; i++) {
-    //     totalLength += this.cart.items[i].quantity
-    //   }
+      for (let i = 0; i < this.cart.items.length; i++) {
+        totalLength += this.cart.items[i].quantity
+      }
 
-    //   return totalLength
-    // }
+      return totalLength
+    }
   }
 }
 </script>
