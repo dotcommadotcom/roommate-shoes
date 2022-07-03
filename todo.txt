@@ -45,5 +45,6 @@ x- create View Detail button to product page
 
 STORE VUE
 x- set up store and store functionality
-- set up store functionality in app
-- set up store functionality in product
+x- set up store functionality in app
+x- set up store functionality in product
+- show success message for add to cart
