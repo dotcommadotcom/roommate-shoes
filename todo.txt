@@ -48,3 +48,4 @@ x- set up store and store functionality
 x- set up store functionality in app
 x- set up store functionality in product
 - show success message for add to cart
+- create loading bar
