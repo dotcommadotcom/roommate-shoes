@@ -74,7 +74,8 @@ x- add delete item button
 ACCOUNT 
 x- make sign up possible
 x- add signup to routers
-- make log in possible
-- add login to routers
-- link login to sign up
+x- make log in possible
+x- add login to routers
+x- set token functionality in store and app
+x- link login and sign up
 - create simple account page
