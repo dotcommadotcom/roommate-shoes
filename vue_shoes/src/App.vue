@@ -12,6 +12,25 @@
       </div>
 
       <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': mobileMenuVisible}">
+        <div class="navbar-start">
+
+          <div class="navbar-item">
+            <form method="get" action="/search">
+              <div class="field has-addons">
+                <div class="control">
+                  <input type="text" class="input" placeholder="What are you looking for?" name="query">
+                </div>
+
+                <div class="control">
+                  <button to="/search" class="button is-dark">
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
         <div class="navbar-end">
           <router-link to="/adidas" class="navbar-item">Adidas</router-link>
           <router-link to="/nike" class="navbar-item">Nike</router-link>
