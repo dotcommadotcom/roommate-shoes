@@ -70,3 +70,11 @@ x- create cart item component
 x- add summary box to cart
 x- add increment/decrement buttons for quantity
 x- add delete item button
+
+ACCOUNT 
+x- make sign up possible
+x- add signup to routers
+- make log in possible
+- add login to routers
+- link login to sign up
+- create simple account page
