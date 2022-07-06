@@ -71,11 +71,13 @@ x- add summary box to cart
 x- add increment/decrement buttons for quantity
 x- add delete item button
 
-ACCOUNT 
+ACCOUNT VUE
 x- make sign up possible
 x- add signup to routers
 x- make log in possible
 x- add login to routers
 x- set token functionality in store and app
 x- link login and sign up
-- create simple account page
+x- create account page
+x- add account to routers
+x- change log in button when logged in
