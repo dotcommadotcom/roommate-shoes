@@ -81,3 +81,8 @@ x- link login and sign up
 x- create account page
 x- add account to routers
 x- change log in button when logged in
+
+CHECKOUT VUE
+x- create checkout vue page
+x- add link to checkout to cart
+x- add checkout to routes

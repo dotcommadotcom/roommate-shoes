@@ -81,7 +81,7 @@ export default {
       this.$store.commit('addToCart', item)
 
       toast({
-        message: 'The product has been added to cart.',
+        message: 'The product(s) have been added to cart.',
         type: 'is-success',
         dismissible: true,
         pauseOnHover: true,

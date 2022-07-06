@@ -6,7 +6,7 @@
       </div>
 
       <div class="column is-12">
-        <button @click="logout()" class="button is-danger">Log out</button>
+        <button v-on:click="logout()" class="button is-danger">Log out</button>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     logout() {
-      axios.defaults.headers.common['Authorization'] = ""
+      axios.defaults.headers.common["Authorization"] = ""
 
       localStorage.removeItem("token")
       localStorage.removeItem("username")
@@ -31,7 +31,12 @@ export default {
       this.$store.commit('removeToken')
 
       this.$router.push('/')
+
+      this.$router.push("/")
+        .then(() => {
+          console.log('Updated route', this.$route)
+        })
     }
-  }
+  },
 }
 </script>
