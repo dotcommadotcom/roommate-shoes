@@ -60,8 +60,8 @@ x- add category to routes
 x- add product view component
 
 SEARCH DJANGO AND VUE
-- create search function to view in django
-- add search to urls 
+x- create search function to view in django
+x- add search to urls 
 - add search form to nav bar
 - create search view in vue
 - connect search to backend
