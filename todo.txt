@@ -52,8 +52,17 @@ x- create loading bar
 - set documnent title
 
 CATEGORY DJANGO AND VUE
-- create category view in django
-- create category serializer
-- add category to urls
-- create category view in vue
-- add category to routes
+x- create category view in django
+x- create category serializer
+x- add category to urls
+x- create category view in vue
+x- add category to routes
+x- add product view component
+
+SEARCH DJANGO AND VUE
+- create search function to view in django
+- add search to urls 
+- add search form to nav bar
+- create search view in vue
+- connect search to backend
+- add search to routes

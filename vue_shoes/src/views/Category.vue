@@ -1,19 +1,12 @@
 <template>
-  <div class="home">
-    <section class="hero is-medium is-link mb-6">
-      <div class="hero-body has-text-centered">
-        <p class="title mb-6">Help me sell my roommate's shoes.</p>
-        <p class="subtitle">Shoes don't pay rent.</p>
-      </div>
-    </section>
-
+  <div class="page-category">
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="is-size-2 has-text-centered mb-6">Latest products</h2>
+        <h2 class="is-size-2 has-text-centered mb-6">{{ category.name }}</h2>
       </div>
 
       <ProductBox
-        v-for="product in latestProducts"
+        v-for="product in category.products"
         v-bind:key="product.id"
         v-bind:product="product" />
     </div>
@@ -26,26 +19,39 @@ import { toast } from 'bulma-toast'
 import ProductBox from '@/components/ProductBox.vue'
 
 export default {
-  name: 'Home',
+  name: 'Category',
   data() {
     return {
-      latestProducts: []
+      category: {
+        products: []
+      }
     }
   },
   components: {
     ProductBox
   },
   mounted() {
-    this.getLatestProducts()
-    document.title = 'Home'
+    this.getCategory()
+  },
+  watch: {
+    $route(to, from) {
+      if (to.name === 'Category') {
+        this.getCategory()
+      }
+    }
   },
   methods: {
-    async getLatestProducts() {
+    async getCategory() {
       this.$store.commit('setIsLoading', true)
 
-      await axios.get('api/v1/latest-products')
+      const category_slug = this.$route.params.category_slug
+
+      await axios.get(`api/v1/products/${category_slug}`)
           .then(response => {
-            this.latestProducts = response.data})
+            this.category = response.data
+
+            document.title = this.category.name
+          })
           .catch(error => {
             console.log(error)
 
@@ -64,5 +70,3 @@ export default {
   }
 }
 </script>
-
-
