@@ -46,6 +46,7 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
+    document.title = 'Home'
   },
   methods: {
     async getLatestProducts() {
@@ -53,8 +54,7 @@ export default {
 
       await axios.get('api/v1/latest-products')
           .then(response => {
-            this.latestProducts = response.data
-          })
+            this.latestProducts = response.data})
           .catch(error => {
             console.log(error)
           })

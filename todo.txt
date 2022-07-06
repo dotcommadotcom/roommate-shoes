@@ -47,5 +47,13 @@ STORE VUE
 x- set up store and store functionality
 x- set up store functionality in app
 x- set up store functionality in product
-- show success message for add to cart
-- create loading bar
+x- show success message for add to cart
+x- create loading bar
+- set documnent title
+
+CATEGORY DJANGO AND VUE
+- create category view in django
+- create category serializer
+- add category to urls
+- create category view in vue
+- add category to routes
