@@ -16,11 +16,7 @@ x- show mobile menu
 
 PRODUCT APP DJANGO
 x- create Category model
-x-- fields: name, slug
-x-- ordering, get_absolute_url
 x- create Product model
-x-- category, name, slug, description, price, image, thumbnail, date added
-x-- ordering, get_absolute_url, get_image_url, get_thumbnail_url, make_thumbnail
 
 PRODUCT SERIALIZER DJANGO
 x- create ProductSerializer
@@ -49,7 +45,7 @@ x- set up store functionality in app
 x- set up store functionality in product
 x- show success message for add to cart
 x- create loading bar
-- set documnent title
+x- set document title
 
 CATEGORY DJANGO AND VUE
 x- create category view in django
@@ -66,3 +62,11 @@ x- add search form to nav bar
 x- create search view in vue
 x- connect search to backend
 x- add search to routes
+
+CART VUE
+x- create cart view in vue
+x- add cart to routes
+x- create cart item component
+x- add summary box to cart
+x- add increment/decrement buttons for quantity
+x- add delete item button
