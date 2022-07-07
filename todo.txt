@@ -14,15 +14,10 @@ x- set up navigation bar
 x- add footer
 x- show mobile menu
 
-PRODUCT APP DJANGO
+PRODUCT DJANGO
 x- create Category model
 x- create Product model
-
-PRODUCT SERIALIZER DJANGO
 x- create ProductSerializer
-x- add fields: id, name, get_absolute_url, description, price, get_image_url, get_thumbnail_url
-
-LATEST PRODUCT LIST DJANGO
 x- create LatestProductList view
 x- get four products and serializer 
 x- add latest products to product urls
@@ -91,3 +86,13 @@ x- add shipping details to checkout
 SUCCESS VUE
 x- create success vue page
 x- add success to route
+
+ORDER DJANGO
+x- create django app order 
+x- add order app to settings
+x- create order model
+x- create order item model
+- create order item serializer
+- create order serializer
+- add models to urls
+- show orders on view
