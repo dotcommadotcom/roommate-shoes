@@ -13,7 +13,7 @@ export default createStore({
   },
   mutations: {
     initializeStore(state) {
-      if (localStorage.getItem('cart')) {
+      if (localStorage.getItem('cart') !== undefined & localStorage.getItem('cart')) {
         state.cart = JSON.parse(localStorage.getItem('cart'))
       } else {
         localStorage.setItem('cart', JSON.stringify(state.cart))
@@ -28,6 +28,8 @@ export default createStore({
       }
     },
     addToCart(state, item) {
+      console.log(typeof state.cart.items);
+
       const exists = state.cart.items.filter(i => i.product.id === item.product.id)
 
       if (exists.length) {
