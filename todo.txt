@@ -101,4 +101,7 @@ x- add clearCart function to store
 x- create user order serializers
 x- create orders list view
 x- import orders list into urls
+- create order summary component
+x- show order summary on account page
+x- get order details from backend
 

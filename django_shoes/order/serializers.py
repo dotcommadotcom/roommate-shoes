@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from django_shoes.product.serializers import ProductSeralizer
+from product.serializers import ProductSeralizer
 
 from .models import Order, OrderItem
 

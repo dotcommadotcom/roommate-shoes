@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view, authentication_classes, permissi
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from .models import Order, OrderItem
+from .models import Order
 from .serializers import OrderSerializer, UserOrderSerializer
 
 @api_view(['POST'])
