@@ -1,6 +1,33 @@
 from rest_framework import serializers
 
+from django_shoes.product.serializers import ProductSeralizer
+
 from .models import Order, OrderItem
+
+class UserOrderItemSerializer(serializers.ModelSerializer):
+  product = ProductSeralizer()
+
+  class Meta:
+    model = OrderItem
+    fields = [
+      "price",
+      "product",
+      "quantity"
+    ]
+
+class UserOrderSerializer(serializers.ModelSerializer):
+  items = UserOrderItemSerializer(many=True)
+
+  class Meta:
+    model = Order
+    fields = [
+      "id",
+      "first_name",
+      "last_name",
+      "email",
+      "items",
+      "paid_amount",
+    ]
 
 class OrderItemSerializer(serializers.ModelSerializer):
   class Meta:
