@@ -87,7 +87,7 @@ SUCCESS VUE
 x- create success vue page
 x- add success to route
 
-ORDER DJANGO
+ORDER DJANGO AND VUE
 x- create django app order 
 x- add order app to settings
 x- create order model
@@ -98,6 +98,7 @@ x- add checkout function to order views
 x- add order models to urls
 x- edit submitOrder function in checkout
 x- add clearCart function to store
-
-ORDER VUE
+x- create user order serializers
+x- create orders list view
+x- import orders list into urls
 
