@@ -92,7 +92,12 @@ x- create django app order
 x- add order app to settings
 x- create order model
 x- create order item model
-- create order item serializer
-- create order serializer
-- add models to urls
-- show orders on view
+x- create order item serializer
+x- create order serializer
+x- add checkout function to order views
+x- add order models to urls
+x- edit submitOrder function in checkout
+x- add clearCart function to store
+
+ORDER VUE
+

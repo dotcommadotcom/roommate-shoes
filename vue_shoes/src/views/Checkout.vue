@@ -111,7 +111,7 @@ export default {
     getItemTotal(item) {
       return item.quantity * item.product.price
     },
-    submitOrder() {
+    async submitOrder() {
       this.errors = []
 
       if (this.first_name === '') {
@@ -124,6 +124,43 @@ export default {
 
       if (this.email === '') {
         this.errors.push('You forgot your email address.')
+      }
+
+      if (!this.errors.length) {
+        this.$store.commit('setIsLoading', true)
+
+        const items = []
+
+        for (let i = 0; i < this.cart.items.length; i++) {
+          const item = this.cart.items[i]
+          const obj = {
+            product: item.product.id,
+            quantity: item.quantity,
+            price: item.product.price * item.quantity
+          }
+
+          items.push(obj)
+        }
+
+        const data = {
+          'first_name': this.first_name,
+          'last_name': this.last_name,
+          'email': this.email,
+          'items': items,
+        }
+
+        await axios.post('/api/v1/checkout/', data)
+                  .then(response => {
+                    this.$store.commit('clearCart')
+                    this.$router.push('/cart/success')
+                  })
+                  .catch(error => {
+                    this.errors.push('Something went wrong. Please try again.')
+
+                    console.log(error)
+                  })
+        
+        this.$store.commit('setIsLoading', false)
       }
     }
   }, 

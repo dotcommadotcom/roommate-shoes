@@ -78,7 +78,7 @@ export default {
       mobileMenuVisible: false,
       cart: {
         items: []
-      }
+      },
     }
   },
   beforeCreate() {
@@ -102,13 +102,9 @@ export default {
   },
   computed: {
     cartTotalLength() {
-      let totalLength = 0
-
-      for (let i = 0; i < this.cart.items.length; i++) {
-        totalLength += this.cart.items[i].quantity
-      }
-
-      return totalLength
+      return this.cart.items.reduce((acc, currentItem) => {
+        return acc += currentItem.quantity
+      }, 0)
     }
   }
 }
